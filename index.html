@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<!-- Comment -->
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<head>
+	<title>
+		Test Website
+	</title>
+	<h1> Test Website </h1>
+</head>
+<body>
+	<h2 class="testClass">This is a header</h2>
+	<p>This is <span class="formatText"> a paragraph </span>
+		<br>Line break</p>
+	<button id="button1" class="button" style="vertical-align:middle"><span>Button </span></button>
+
+
+	<!-- ANGULAR -->
+
+	<div ng-app="myApp" ng-controller="myCtrl">
+
+		First Name: <input type="text" ng-model="firstName"><br>
+		Last Name: <input type="text" ng-model="lastName"><br>
+		<br>
+		Full Name: {{firstName + " " + lastName | lowercase}}
+		<br>
+		{{ variable1 }}
+		<br>
+		<button ng-click="count = count + 1">click me</button>
+		<p>clicks: {{count}}</p>
+	</div>
+
+
+
+	<div id="module2">
+		<p>Mathematical Expression: {{ 4* 5 }}</p>
+	</div>
+	<script src="script.js"></script>
+
+</body>
+
+<footer>
+	<p> This is the footer </p>
+</footer>
+</html>
+
